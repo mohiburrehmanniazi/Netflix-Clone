@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "roboto",serif;
+}
+
+.navbar{
+  display: flex;
+  height: 70px;
+  background-color: rgb(19, 17, 17);
+}
+
+.netflix_logo{
+  margin-top: -15px;
+  margin-left: 8px;
+  height: 94px;
+}
+
+.categories{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.categories li{
+  margin-left: 80px;
+  color: rgb(232, 232, 232);
+  list-style-type: none;
+  font-size: 20px;
+  cursor: pointer;
+}
