@@ -31,3 +31,7 @@
   font-size: 20px;
   cursor: pointer;
 }
+
+#root{
+  width: 100%;
+}
