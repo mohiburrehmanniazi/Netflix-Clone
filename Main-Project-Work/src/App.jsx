@@ -3,6 +3,7 @@ import React from 'react'
 import './App.css'
 import Navbar from './Components/Navbar';
 import ImageSlider from './Components/ImageSlider';
+import MovieList from './Components/MovieList';
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
     <>
     <Navbar/>
     <ImageSlider/>
+    <MovieList/>
     </>
   )
 }
