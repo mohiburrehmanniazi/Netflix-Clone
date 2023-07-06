@@ -29,10 +29,13 @@ export default function MovieList() {
     }]
 
   return (
+    <>
+    <h1 className='text-white text-2xl ml-5 mt-2'>Movies</h1>
     <div className="flex py-3 px-4">
         {
             movies.map((movie)=> <MovieCard key={movie.id} url={movie.url} />)
         }
     </div>
+    </>
   )
 }
