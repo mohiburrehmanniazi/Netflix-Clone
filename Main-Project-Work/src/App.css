@@ -36,3 +36,25 @@
 #root{
   width: 100%;
 }
+
+.search{
+  display: flex;
+  align-items: center;
+  padding: 4px 5px;
+  width: 40px;
+  transition: 0.3s ease-in;
+  cursor: pointer;
+}
+
+.search input{
+  padding: 4px 12px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: white;
+}
+
+.active{
+  width: 350px;
+  border: 0.4px solid white;
+}
