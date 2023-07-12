@@ -38,15 +38,15 @@ function Navbar() {
     <>
       <div className='flex justify-between items-center'>
         <nav className='navbar'>
-          <div className='img_container'>
-            <img className='netflix_logo' src={NetflixLogo} alt="" />
-          </div>
-          <div className='categories'>
-            <li>TV Shows</li>
-            <li>Movies</li>
-            <li>Recently Added</li>
-            <li>My List</li>
-          </div>
+            <div className='img_container'>
+                <img className='netflix_logo' src={NetflixLogo} alt="" />
+            </div>
+            <div className='categories '>
+                <li className='hover:text-red-600' >TV Shows</li>
+                <li className='hover:text-red-600'>Movies</li>
+                <li className='hover:text-red-600'>Recently Added</li>
+                <li className='hover:text-red-600'>My List</li>
+            </div>
         </nav>
 
         <div id='searchbar' className="search mr-16">

@@ -24,8 +24,11 @@ function ImageSlider() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        height: '800px',
-        backgroundSize: 'cover'
+        height: '550px',
+        backgroundSize: 'cover',
+        border: 'none',
+        
+        
     }
 
     return (
