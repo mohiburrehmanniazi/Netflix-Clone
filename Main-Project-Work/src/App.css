@@ -58,3 +58,44 @@
   width: 350px;
   border: 0.4px solid white;
 }
+
+.titleSlide{
+  text-align: left;
+}
+
+.slideOverveiw{
+  text-align: left;
+}
+
+.cards {
+  display: inline-block;
+  transition: transform .2s;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0.10rem;
+  cursor:pointer;
+  min-width:200px;
+  height:300px;
+  width: 150px;
+  z-index:0;
+  border: 1px solid rgb(99, 99, 99);
+}
+
+.cards:hover {
+  transform: scale(1.2);
+  z-index: 1000;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.cards__img {
+  height: 300px;
+}
+
+.movie-container{
+  margin-top: -6px;
+  display:flex ;
+  flex-wrap: wrap;
+  flex-grow:calc(1);
+  justify-content: center;
+}

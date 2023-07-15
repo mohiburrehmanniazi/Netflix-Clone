@@ -3,6 +3,7 @@ import React from 'react';
 import '../App.css';
 import NetflixLogo from '../assets/NetflixLogo.png';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   const [displayProp, setDisplayProp] = useState('none')
@@ -39,13 +40,13 @@ function Navbar() {
       <div className='flex justify-between items-center'>
         <nav className='navbar'>
             <div className='img_container'>
-                <img className='netflix_logo' src={NetflixLogo} alt="" />
+               <Link to='/'> <img className='netflix_logo' src={NetflixLogo} alt="" /></Link> 
             </div>
             <div className='categories '>
-                <li className='hover:text-red-600' >TV Shows</li>
-                <li className='hover:text-red-600'>Movies</li>
-                <li className='hover:text-red-600'>Recently Added</li>
-                <li className='hover:text-red-600'>My List</li>
+                <Link to='/movies/TV_Shows' className='hover:text-red-600 text-white ml-6 text-xl'>TV Shows</Link>
+                <Link to='/movies/Movies' className='hover:text-red-600 text-white ml-4 ml-8 text-xl' >Movies</Link>
+                <Link to='/movies/Upcoming' className='hover:text-red-600 text-white ml-4 ml-8 text-xl' >Upcoming</Link>
+                <Link to='/movies/My_List' className='hover:text-red-600 text-white ml-4 ml-8 text-xl' >My List</Link>
             </div>
         </nav>
 
