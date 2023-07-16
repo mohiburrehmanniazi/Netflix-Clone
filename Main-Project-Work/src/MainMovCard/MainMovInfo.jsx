@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react"
 import "./movie.css"
 import { useParams } from "react-router-dom"
+import MainReview from "../MainReview/mainrev"
 
 const MainMovInfo = () => {
     const [currentMovieDetail, setMovie] = useState()
@@ -67,8 +68,9 @@ const MainMovInfo = () => {
                     currentMovieDetail && currentMovieDetail.imdb_id && <a href={"https://www.imdb.com/title/" + currentMovieDetail.imdb_id} target="_blank" style={{textDecoration: "none"}}><p><span className="movie__imdbButton movie__Button">IMDb<i className="newTab fas fa-external-link-alt"></i></span></p></a>
                 }
             </div>
-           
+           <MainReview />
         </div>
+      
     )
 }
 

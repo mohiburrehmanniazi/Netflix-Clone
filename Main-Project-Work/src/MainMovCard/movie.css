@@ -96,6 +96,7 @@
 
 .movie__heading {
     font-size: 2.2rem;
+    color: white;
 }
 
 .movie__Button {
@@ -112,13 +113,33 @@
 
 .movie__homeButton {
     background-color:rgb(255, 0, 0);
+    color: white;
+    
+}
+
+.movie__homeButton:hover {
+  background-color: darkred;
+  transform: scale(1.2);
+  transition: 1s;
     
 }
 
 .movie__imdbButton {
     background-color:#f3ce13;
+    color: black;
+    
 }
+.movie__imdbButton:hover {
+    background-color: darkgoldenrod;
+    transform: scale(1.2);
+    transition: 1s;
+      
+  }
 
 .newTab {
     margin-left: 1.4rem;
+}
+
+.mainpage{
+    background-color: white;
 }
