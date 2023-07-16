@@ -16,7 +16,7 @@ export default function MovieList({search}) {
         .then(res => res.json())
         .then(data => setMovieList(data.results))
       },[])
-    //   console.log(MovieList)
+    
 
   return (
     <>

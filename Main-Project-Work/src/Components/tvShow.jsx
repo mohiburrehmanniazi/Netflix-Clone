@@ -21,7 +21,7 @@ export default function TvShow() {
     <div className='movie-container mx-1 flex py-3 px-4 justify-center' >
     {
     MovieList.map(movie => (
-      <Link to={`/MainMovCard/MainMovInfo/${movie.id}`}>
+      <Link to={`/MainMovCard/MainTvInfo/${movie.id}`}>
       <div className="mainMovCon flex py-3 px-4 justify-center grow-5">
             <div className="cards mx-1">
               <img className="cards__img" src={`https://image.tmdb.org/t/p/original${movie?movie.poster_path:""}`}/>

@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react"
 import "./movie.css"
 import { useParams } from "react-router-dom"
 
-const MainMovInfo = () => {
+const MainTvInfo = () => {
     const [currentMovieDetail, setMovie] = useState()
     const { id } = useParams()
 
@@ -12,7 +12,7 @@ const MainMovInfo = () => {
     }, [])
 
     const getData = () => {
-        fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=5eb24d8a02882415942137db108adf72&language=en-US`)
+        fetch(`https://api.themoviedb.org/3/tv/${id}?api_key=5eb24d8a02882415942137db108adf72&language=en-US`)
         .then(res => res.json())
         .then(data => setMovie(data))
     }
@@ -38,7 +38,8 @@ const MainMovInfo = () => {
                             <span className="movie__voteCount">{currentMovieDetail ? "(" + currentMovieDetail.vote_count + ") votes" : ""}</span>
                         </div>  
                         <div className="movie__runtime">{currentMovieDetail ? currentMovieDetail.runtime + " mins" : ""}</div>
-                        <div className="movie__releaseDate">{currentMovieDetail ? "Release date: " + currentMovieDetail.release_date : ""}</div>
+                        <div className="movie__releaseDate">{currentMovieDetail ? "Release date: " + currentMovieDetail.first_air_date : ""}</div>
+                        <div className="movie__releaseDate">{currentMovieDetail ? "Origin Country: " + currentMovieDetail.origin_country : ""}</div>
                         <div className="movie__genres">
                             {
                                 currentMovieDetail && currentMovieDetail.genres
@@ -72,4 +73,4 @@ const MainMovInfo = () => {
     )
 }
 
-export default MainMovInfo
+export default MainTvInfo

@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react"
 import "./movie.css"
 import { useParams } from "react-router-dom"
 
-const MainMovInfo = () => {
+const MainUpInfo = () => {
     const [currentMovieDetail, setMovie] = useState()
     const { id } = useParams()
 
@@ -12,7 +12,7 @@ const MainMovInfo = () => {
     }, [])
 
     const getData = () => {
-        fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=5eb24d8a02882415942137db108adf72&language=en-US`)
+        fetch(`https://api.themoviedb.org/3/movie/popular/${id}?api_key=5eb24d8a02882415942137db108adf72&language=en-US`)
         .then(res => res.json())
         .then(data => setMovie(data))
     }
@@ -72,4 +72,4 @@ const MainMovInfo = () => {
     )
 }
 
-export default MainMovInfo
+export default MainUpInfo

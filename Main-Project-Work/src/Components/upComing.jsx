@@ -20,12 +20,14 @@ export default function UpComing() {
     <div className='movie-container mx-1 flex py-3 px-4 justify-center' >
     {
     MovieList.map(movie => (
+      <Link to={`/MainMovCard/MainUpInfo/${movie.id}`}>
       <div className="mainMovCon flex py-3 px-4 justify-center grow-5">
             <div className="cards mx-1">
               <img className="cards__img" src={`https://image.tmdb.org/t/p/original${movie?movie.poster_path:""}`}/>
              <div>{movie ? movie.original_title: ""}</div>
             </div>
           </div>
+          </Link>
     ))
     }
     </div>
