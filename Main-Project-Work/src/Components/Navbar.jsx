@@ -4,6 +4,8 @@ import '../App.css';
 import NetflixLogo from '../assets/NetflixLogo.png';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import ImageSlider from "./ImageSlider";
+import MovieList from "./MovieList";
 
 function Navbar() {
   const [displayProp, setDisplayProp] = useState('none')
@@ -37,7 +39,7 @@ function Navbar() {
 
   return (
     <>
-      <div className='flex justify-between items-center'>
+      <div className='flex justify-between items-center sticky top-0 z-10'>
         <nav className='navbar'>
             <div className='img_container'>
                <Link to='/'> <img className='netflix_logo' src={NetflixLogo} alt="" /></Link> 
@@ -59,9 +61,11 @@ function Navbar() {
 
           <input type="text" style={{
             display: displayProp
-          }} placeholder="Titles, people, genres" value={search} onChange={handleChange} />
+          }} placeholder="Titles, people, genres" onChange={handleChange} />
         </div>
       </div>
+      <ImageSlider />
+        <MovieList search={search}/>
     </>
   )
 }

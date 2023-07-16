@@ -2,9 +2,9 @@ import React, {useEffect, useState} from "react"
 import './movie.css'
 import { useParams } from "react-router"
 
-function InfoDisplay (){
+function MainMovInfo (){
 
-    const [currentMovieDetail, setMovieDetail] = useState()
+    const [currentMovieDetail, setCurrentMovieDetail] = useState()
     const {id} = useParams()
 
     useEffect(() => {
@@ -12,12 +12,15 @@ function InfoDisplay (){
     window.scrollTo(0,0)
     },[])
 
+    
     const getData = () => {
         fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=5eb24d8a02882415942137db108adf72`)
         .then(res => res.json())
-        .then(data => setMovieDetail(data.results))
-    }
+        .then(data => setCurrentMovieDetail(data.results))
 
+    }
+    
+    console.log(currentMovieDetail)
     return(
            <>
             <div className="movie">
@@ -73,4 +76,4 @@ function InfoDisplay (){
            </>
     )
 }
-export default InfoDisplay
+export default MainMovInfo

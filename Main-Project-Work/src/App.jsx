@@ -2,31 +2,30 @@
 import React from "react";
 import "./App.css";
 import Navbar from "./Components/Navbar";
-import ImageSlider from "./Components/ImageSlider";
 import MovieList from "./Components/MovieList";
-import TvList from "./Components/tvShow";
-import UpComingList from "./Components/upcoming";
+import TvShow from "./Components/TvShow";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
+import MainMovInfo from "./MainMovCard/MainMovInfo"
+import UpComing from "./Components/UpComing";
 
 function App() {
   return (
     <>
       <div>
         <Router>
-        <Navbar />
+        
           <Routes>
-            <Route  element={<h1>this is detail page</h1>}></Route>
-            <Route></Route>
-            <Route></Route>
-            <Route></Route>
+            <Route path='/' element={<Navbar />}></Route>
+            <Route path='/MainMovCard/MainMovInfo/:id' element={<MainMovInfo/>}></Route>
+            <Route path='/movies/TV_Shows' element={<TvShow/>}></Route>
+            <Route path='/movies/Movies' element={<MovieList/>}></Route>
+            <Route path='/movies/Upcoming' element={<UpComing/>}></Route>
           </Routes>
         </Router>
        
-        <ImageSlider />
-        <MovieList />
-        <TvList />
-          <UpComingList />
+        
+        {/* <TvList />
+          <UpComingList /> */}
           
           
       </div>

@@ -3,7 +3,7 @@ import '../App.css';
 
 
 
-export default function TvList() {
+export default function TvShow() {
   const [MovieList, setMovieList] = useState([])
   
     useEffect(() => {

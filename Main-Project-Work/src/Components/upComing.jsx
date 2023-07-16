@@ -3,7 +3,7 @@ import '../App.css';
 
 
 
-export default function UpComingList() {
+export default function UpComing() {
   const [MovieList, setMovieList] = useState([])
   
     useEffect(() => {
