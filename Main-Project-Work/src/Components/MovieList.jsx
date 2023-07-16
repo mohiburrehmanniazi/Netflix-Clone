@@ -27,7 +27,7 @@ export default function MovieList({search}) {
        
     {
     MovieList.filter((movie)=>{
-        return search.toLowerCase() === ''? movie : movie.original_title.toLowerCase().startsWith(search)
+        return search.toLowerCase() === ''? movie : movie.original_title.toLowerCase().includes(search)
     }).map(movie => (
     <Link to={`/MainMovCard/MainMovInfo/${movie.id}`}>
       <div className="mainMovCon flex py-3 px-4 justify-center grow-5">

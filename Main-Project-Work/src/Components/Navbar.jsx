@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ImageSlider from "./ImageSlider";
 import MovieList from "./MovieList";
+import TvShow from './TvShow';
 
 function Navbar() {
   const [displayProp, setDisplayProp] = useState('none')
@@ -64,8 +65,15 @@ function Navbar() {
           }} placeholder="Titles, people, genres" onChange={handleChange} />
         </div>
       </div>
-      <ImageSlider />
-        <MovieList search={search}/>
+      { search==="" ? ( 
+          <>
+          <ImageSlider />
+          <MovieList search={search}/>
+          <TvShow/>
+          </>
+      ) : <MovieList search={search}/>
+      }
+
     </>
   )
 }
