@@ -1,23 +1,19 @@
-import React,{useState, useEffect} from 'react'
+import React,{useState, useEffect, useContext} from 'react'
 import '../App.css';
 import { Link } from 'react-router-dom';
+import MovieCard from './MovieCard';
+import { MyListContext } from '../Context/MyListContext';
 
-
-
-
-
-
-export default function MovieList({search}) {
+export default function MovieList() {
   const [MovieList, setMovieList] = useState([])
-  console.log(search)
-  
+  const { search} = useContext(MyListContext)
+
     useEffect(() => {
         fetch("https://api.themoviedb.org/3/movie/popular?api_key=5eb24d8a02882415942137db108adf72")
         .then(res => res.json())
         .then(data => setMovieList(data.results))
       },[])
     
-
   return (
     <>
     
@@ -30,18 +26,13 @@ export default function MovieList({search}) {
         return search.toLowerCase() === ''? movie : movie.original_title.toLowerCase().includes(search)
     }).map(movie => (
     <Link to={`/MainMovCard/MainMovInfo/${movie.id}`}>
-      <div className="mainMovCon flex py-3 px-4 justify-center grow-5">
-            <div className="cards " >
-              <img className="cards__img" src={`https://image.tmdb.org/t/p/original${movie?movie.poster_path:""}`}/>
-             <div>{movie ? movie.original_title: ""}</div>
-            </div>
-          </div>
+    <div className="mainMovCon flex py-3 px-4 justify-center grow-5">
+      <MovieCard key={movie.id} url={`https://image.tmdb.org/t/p/original${movie?movie.poster_path:""}`} title={movie ? movie.original_title: ""}/>
+      </div>
     </Link>
     ))
     }
     </div>
-    
-
     </>
     )}
     

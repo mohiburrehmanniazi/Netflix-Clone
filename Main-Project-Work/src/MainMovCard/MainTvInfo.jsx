@@ -1,10 +1,14 @@
-import React, {useEffect, useState} from "react"
+import React, {useEffect, useState, useContext} from "react"
 import "./movie.css"
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
+import { MyListContext } from "../Context/MyListContext"
 
 const MainTvInfo = () => {
     const [currentMovieDetail, setMovie] = useState()
     const { id } = useParams()
+    const navigate = useNavigate()
+    const { setMyList } = useContext(MyListContext)
+    const { myList } = useContext(MyListContext)
 
     useEffect(() => {
         getData()
@@ -16,6 +20,14 @@ const MainTvInfo = () => {
         .then(res => res.json())
         .then(data => setMovie(data))
     }
+
+    const addToList = (e) => {
+        if(currentMovieDetail.id!=myList.id){
+            myList.push(currentMovieDetail)
+            setMyList(myList)
+        }
+        // navigate('/My_List')
+      }
    
 
     return (
@@ -50,6 +62,7 @@ const MainTvInfo = () => {
                                 : 
                                 ""
                             }
+                            <button className="text-black rounded-2xl" onClick={addToList}>Add to MyList</button>
                         </div>
                     </div>
                     <div className="movie__detailRightBottom">

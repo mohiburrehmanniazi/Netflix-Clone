@@ -7,10 +7,12 @@ import { Link } from 'react-router-dom';
 import ImageSlider from "./ImageSlider";
 import MovieList from "./MovieList";
 import TvShow from './TvShow';
+import { MyListContext } from "../Context/MyListContext"
+import { useContext } from 'react';
 
 function Navbar() {
   const [displayProp, setDisplayProp] = useState('none')
-  const [search, setSearch] = useState('')
+  const { search, setSearch } = useContext(MyListContext)
 
   const handleClick = () => {
     let search = document.querySelector('.search')
@@ -49,7 +51,7 @@ function Navbar() {
                 <Link to='/movies/TV_Shows' className='hover:text-red-600 text-white ml-6 text-xl'>TV Shows</Link>
                 <Link to='/movies/Movies' className='hover:text-red-600 text-white ml-4 ml-8 text-xl' >Movies</Link>
                 <Link to='/movies/Upcoming' className='hover:text-red-600 text-white ml-4 ml-8 text-xl' >Upcoming</Link>
-                <Link to='/movies/My_List' className='hover:text-red-600 text-white ml-4 ml-8 text-xl' >My List</Link>
+                <Link to='/My_List' className='hover:text-red-600 text-white ml-4 ml-8 text-xl' >My List</Link>
             </div>
         </nav>
 
@@ -65,15 +67,6 @@ function Navbar() {
           }} placeholder="Titles, people, genres" onChange={handleChange} />
         </div>
       </div>
-      { search==="" ? ( 
-          <>
-          <ImageSlider />
-          <MovieList search={search}/>
-          <TvShow/>
-          </>
-      ) : <MovieList search={search}/>
-      }
-
     </>
   )
 }
