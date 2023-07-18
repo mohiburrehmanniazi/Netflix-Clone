@@ -1,0 +1,62 @@
+.form{
+    height: 34rem;
+    background-color: rgba(0,0,0,0.8);
+    width: 22.5rem;
+    display: flex;
+    flex-direction: column;
+    padding-left: 60px;
+    margin-bottom: 1.5em;
+}
+
+.info1 , .info2{
+    /* margin-top: 2em; */
+    margin-bottom: 1.5em;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    width:250px;
+}
+
+input{
+    color: white;
+    height: 35px;
+    padding: 4px;
+    font-size: 20px;
+    background-color: #333333;
+    width: 18rem;
+    border: 1px solid rgb(76, 76, 76);
+}
+
+.heading{
+    color: white;
+    margin-bottom: 2em;
+    margin-top: 4em;
+    font-weight: 500;
+}
+
+button{
+    height: 35px;
+    padding: 4px;
+    font-size: 20px;
+    background-color: #E50914;
+    width: 18.6rem;
+    border: 0.5px solid #E50914;
+    border-radius: 6px;
+    color: white;
+    height: 45px;
+}
+
+.text{
+    margin-top: 4em;
+    color:#6a6969;
+    margin-right: 2em;
+}
+
+a{
+    color:#0961FF;
+    text-decoration: none;
+}
+
+.netflix_logo{
+    height: 8em;
+}
