@@ -34,8 +34,7 @@ input{
     font-weight: 500;
 }
 
-button{
-    height: 35px;
+.btn{
     padding: 4px;
     font-size: 20px;
     background-color: #E50914;

@@ -1,11 +1,11 @@
 /* eslint-disable no-dupe-else-if */
-
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react'
 import './logIn.css'
 import LogInBackground from '../assets/LogInBackground.jpg'
 import { useNavigate } from 'react-router-dom'
 import NetflixLogo from '../assets/NetflixLogo.png';
+import Modal from './Modal';
 
 function LogIn() {
     const u_name = "leadingcoders"
@@ -14,21 +14,22 @@ function LogIn() {
     const navigate = useNavigate();
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
+    const [openModal, setOpenModal] = useState(false)
 
     const submitHandler = (e) => {
         e.preventDefault()
         if (username == "" && password == "") {
-            alert("Please enter your credentials.")
+            setOpenModal(true)
         } else if (username !== u_name && password !== pass) {
-            alert("Please Enter Correct Credentials.")
+            setOpenModal(true)
         } else if (username == "") {
-            alert("Please Enter Username.")
+            setOpenModal(true)
         } else if (password == "") {
-            alert("Please Enter Password.")
+            setOpenModal(true)
         } else if (username != u_name) {
-            alert("Incorrect Username.")
+            setOpenModal(true)
         } else if (password != pass) {
-            alert("Incorrect Password.")
+            setOpenModal(true)
         } else if (username === u_name && password === pass) {
             navigate('/')
         }
@@ -64,13 +65,26 @@ function LogIn() {
                             <input type="password" placeholder='Password' onChange={
                                 (e) => { setPassword(e.target.value) }} />
                         </div>
-                        <button>Sign In</button>
+                        <button className='btn'>Sign In</button>
                         <div className="text">
                             <p>This page is protected by Google reCAPTCHA to ensure you are not a bot.<a href='https://www.google.com/recaptcha/about/'>Learn More.</a></p>
                         </div>
                     </form>
                 </div>
+                {openModal && (
+                    <Modal
+                        closeModal={setOpenModal}
+                        message={
+                            username === '' || password === ''
+                                ? 'Please enter both username and password.'
+                                : username === u_name && password !== pass
+                                    ? 'Incorrect password. Please try again.'
+                                    : "Sorry, we can't find an account with this username. Please try again."
+                        }
+                    />
+                )}
             </div>
+
         </>
     )
 }
