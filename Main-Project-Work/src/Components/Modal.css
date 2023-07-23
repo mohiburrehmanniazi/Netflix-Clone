@@ -1,0 +1,48 @@
+.modalContainer{
+    border-radius: 8px;
+    height: 18em;
+    width: 34em;
+    background-color: rgba(0,0,0);
+}
+
+.modalBg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -450px; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.body{
+    /* display: flex; */
+    margin-top: 100px;
+}
+
+.msg{
+    text-align: center;
+    /* margin-left: 25px; */
+    font-size: 26px;
+    color: rgb(209, 209, 209);
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 28px;
+}
+
+.modalBtn{
+    padding: 4px;
+    font-size: 20px;
+    background-color: #E50914;
+    width: 7rem;
+    border: 0.5px solid #E50914;
+    border-radius: 6px;
+    color: white;
+    height: 45px;
+}

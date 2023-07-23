@@ -1,0 +1,87 @@
+.bar {
+    background-color: #af7eeb;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    width: 400px;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+}
+
+.todo-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.todo-task-title{
+    background-color: white;
+    
+}
+.todo-list {
+    width: 1200px;
+    margin-top: 20px;
+    background-color:white;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 40px;
+    background-color: white;
+}
+
+.todo-add-btn {
+    background-color: #af7eeb;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 12px;
+    font-size: 16px;
+}
+
+.input-field {
+    width: 1100px;
+    height: 100px;
+    outline: none;
+    margin-top: 20px;
+    padding: 0 20px;
+    font-size: 16px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    background-color: whitesmoke;
+}
+.input-field::placeholder{
+    color: black;
+    font-size: larger;
+    
+    
+}
+
+.name-input-field{
+    background-color: whitesmoke;
+    margin-top: 2px;
+    border-bottom-left-radius: 10px;
+    width: 300px;
+    height: 40px;
+    margin-left: -66.7%;
+}
+.name-input-field::placeholder{
+    color: black;
+    padding-left: 18px;
+}
+
+.add-todo {
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.heading{
+    color: white;
+}
