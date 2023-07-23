@@ -1,11 +1,12 @@
 
 import "./todo.css"
 
-export const TodoItem = ({ title, isDone, deleteTodo, completeTodo }) => {
+export const TodoItem = ({ title, discription, isDone }) => {
+  // console.log(title, discription)
   return (
-    <div className="todo-item" id="todo-1">
-      <p
-        className="todo-task-title"
+    <div className="todo-item flex-col " id="todo-1">
+      <h2
+        className="todo-task-title text-xl"
         style={
           isDone
             ? {
@@ -15,6 +16,10 @@ export const TodoItem = ({ title, isDone, deleteTodo, completeTodo }) => {
         }
       >
         {title}
+        
+      </h2>
+      <p className="todo-task-discription bg-transparent mb-2">
+      {discription}
       </p>
      
     </div>

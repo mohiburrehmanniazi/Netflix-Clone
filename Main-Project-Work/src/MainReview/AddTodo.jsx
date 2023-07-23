@@ -12,11 +12,11 @@ export const AddTodo = ({ addTodo }) => {
   const onNew = (e) => {
     setNewName(e.target.value)
   }
-  
+
 
   return (
     <div className="add-todo">
-      <input
+      <textarea
         className="input-field"
         type="text"
         placeholder="Enter Your Review Here..."
@@ -24,7 +24,7 @@ export const AddTodo = ({ addTodo }) => {
         onChange={onChange}
       />
       <input 
-      className="name-input-field"
+      className="name-input-field text-black"
       type="text"
       placeholder="Enter Your Name..."
       value={newName}
@@ -32,7 +32,7 @@ export const AddTodo = ({ addTodo }) => {
       <button
         className="todo-add-btn rounded-md"
         onClick={() => {
-          addTodo(newTask)
+          addTodo(newTask, newName)
           setNewTask("")
           addTodo(newName)
           setNewName("")

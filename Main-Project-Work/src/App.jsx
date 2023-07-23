@@ -11,15 +11,17 @@ import MainTvInfo from "./MainMovCard/MainTvInfo";
 import MainUpInfo from "./MainMovCard/MainUpInfo";
 import MyList from "./Components/MyList";
 import Home from "./Components/Home";
+import LogIn from "./Components/LogIn"
 
 function App() {
   return (
     <>
       <div>
         <Router>
-          <Navbar />
+          {/* <Navbar /> */}
           <Routes>
-            <Route path='/' element={<Home/>}></Route>
+            <Route path='/' element={<LogIn/>}></Route>
+            <Route path='/home' element={<Home/>}></Route>
             <Route path='/MainMovCard/MainMovInfo/:id' element={<MainMovInfo/>}></Route>
             <Route path='/MainMovCard/MainTvInfo/:id' element={<MainTvInfo/>}></Route>
             <Route path='/MainMovCard/MainUpInfo/:id' element={<MainUpInfo/>}></Route>

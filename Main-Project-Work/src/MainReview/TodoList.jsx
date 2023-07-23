@@ -7,65 +7,51 @@ export const TodoList = () => {
   const [items, setItems] = useState([
     {
       id: 1,
-      title: "Learn React",
+      title: "Mubashir",
+      discription: "very good, action was good and i like and i will watch this again",
       isDone: false
     },
     {
       id: 2,
-      title: "Learn Node",
+      title: "Ali Khan",
+      discription: "very good fantastic, best thing i have ever seen on screen now the film industry has to make more movies like this in future",
       isDone: false
     },
     {
       id: 3,
-      title: "Learn Mongo",
+      title: "Ilyas Nagori",
+      discription: "Awosome",
       isDone: false
     },
     {
       id: 4,
-      title: "Learn to be Insan",
+      title: "Alishba ",
+      discription: "i didn't Like, because in all seens all Actresses didn't wear the pink color so disapointment",
       isDone: false
     }
   ])
 
-  const [doneCount, setDoneCount] = useState(0)
-
-  useEffect(() => {
-    const doneItems = items.filter((item) => item.isDone)
-    setDoneCount(doneItems.length)
-  }, [items])
-
-  const deleteTodo = (id) => {
-    const toBeDeletedIndex = items.findIndex((item) => item.id === id)
-    items.splice(toBeDeletedIndex, 1)
-    setItems([...items])
-  }
-
-  const addTask = (title) => {
+  const addTask = (discription, title) => {
     if (!title) {
       return
     }
-    const newTask = { id: items.length + 1, title, isDone: false }
+    const newTask = { id: items.length + 1, title, discription, isDone: false }
     const newItems = [...items, newTask]
     setItems(newItems)
-  }
-
-  const doneTodo = (id) => {
-    const todoItem = items.find((item) => item.id === id)
-    todoItem.isDone = true
-    setItems([...items])
-  }
+}
 
   return (
     <div className="mainpage">
     
       <div>
-        <h2 className="heading">Total Reviews: {doneCount}</h2>
+        <h2 className="heading">Total Reviews: {items.length}</h2>
       </div>
       <div className="todo-list shadow-lg">
         {items.map((item) => (
           <TodoItem
             key={item.id}
             title={item.title}
+            discription={item.discription}
             isDone={item.isDone}
             deleteTodo={() => {
               deleteTodo(item.id)

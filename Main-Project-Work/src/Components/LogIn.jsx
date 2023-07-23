@@ -31,7 +31,7 @@ function LogIn() {
         } else if (password != pass) {
             setOpenModal(true)
         } else if (username === u_name && password === pass) {
-            navigate('/')
+            navigate('/home')
         }
     }
 
@@ -77,7 +77,7 @@ function LogIn() {
                         message={
                             username === '' || password === ''
                                 ? 'Please enter both username and password.'
-                                : username === u_name && password !== pass
+                                : username !== u_name && password !== pass
                                     ? 'Incorrect password. Please try again.'
                                     : "Sorry, we can't find an account with this username. Please try again."
                         }

@@ -45,7 +45,7 @@ function Navbar() {
       <div className='flex justify-between items-center sticky top-0 z-10'>
         <nav className='navbar'>
             <div className='img_container'>
-               <Link to='/'> <img className='netflix_logo' src={NetflixLogo} alt="" /></Link> 
+               <Link to='/home'> <img className='netflix_logo' src={NetflixLogo} alt="" /></Link> 
             </div>
             <div className='categories '>
                 <Link to='/movies/TV_Shows' className='hover:text-red-600 text-white ml-6 text-xl'>TV Shows</Link>
