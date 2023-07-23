@@ -43,6 +43,7 @@ function LogIn() {
                 backgroundImage: `url(${LogInBackground})`,
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
+                
             }}>
                 <div className="logo">
                     <img className='netflix_logo' src={NetflixLogo} alt="" />
@@ -51,11 +52,14 @@ function LogIn() {
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    marginTop: '8em'
+                    marginTop: '8em',
+                    position: 'absolute',
+                    marginLeft: '550px',
+                    marginTop: '40px',
                 }}>
                     <form className="form" onSubmit={submitHandler}>
-                        <div className="heading">
-                            <h1>Sign In</h1>
+                        <div className="heading ">
+                            <h1 className='heading1'>Sign In</h1>
                         </div>
                         <div className="info1">
                             <input type="text" placeholder='Username' onChange={
@@ -67,7 +71,7 @@ function LogIn() {
                         </div>
                         <button className='btn'>Sign In</button>
                         <div className="text">
-                            <p>This page is protected by Google reCAPTCHA to ensure you are not a bot.<a href='https://www.google.com/recaptcha/about/'>Learn More.</a></p>
+                            <p className='text1'>This page is protected by Google reCAPTCHA to ensure you are not a bot.<a href='https://www.google.com/recaptcha/about/'>Learn More.</a></p>
                         </div>
                     </form>
                 </div>

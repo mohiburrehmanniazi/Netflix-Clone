@@ -26,8 +26,7 @@ function Navbar() {
   }
 
   let searchbar = document.querySelector('#searchbar')
-
-  document.addEventListener("click", function (event) {
+document.addEventListener("click", function (event) {
     if (event.target.closest(".search")) 
       return
     if(searchbar!=null){
@@ -35,6 +34,7 @@ function Navbar() {
       setDisplayProp('none')
     }
   })
+  
 
   const handleChange = (e) => {
     setSearch(e.target.value)

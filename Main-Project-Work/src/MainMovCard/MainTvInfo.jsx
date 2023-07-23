@@ -3,10 +3,12 @@ import "./movie.css"
 import { useNavigate, useParams } from "react-router-dom"
 import { MyListContext } from "../Context/MyListContext"
 import Navbar from "../Components/Navbar"
+import MainReview from "../MainReview/mainrev"
 
 const state = JSON.parse(window.localStorage.getItem("btn")) || "Add to MyList"
 
 const MainTvInfo = () => {
+    
     const [currentMovieDetail, setMovie] = useState()
     const [btnState, setBtnState] = useState(state)
 
@@ -113,7 +115,7 @@ const MainTvInfo = () => {
                         currentMovieDetail && currentMovieDetail.imdb_id && <a href={"https://www.imdb.com/title/" + currentMovieDetail.imdb_id} target="_blank" style={{ textDecoration: "none" }}><p><span className="movie__imdbButton movie__Button">IMDb<i className="newTab fas fa-external-link-alt"></i></span></p></a>
                     }
                 </div>
-
+             <MainReview />
             </div>
         </>
     )
