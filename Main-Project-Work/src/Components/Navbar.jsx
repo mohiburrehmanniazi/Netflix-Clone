@@ -42,7 +42,7 @@ document.addEventListener("click", function (event) {
 
   return (
     <>
-      <div className='flex justify-between items-center sticky top-0 z-10'>
+      <div className='bg-black flex justify-between items-center sticky top-0 z-10'>
         <nav className='navbar'>
             <div className='img_container'>
                <Link to='/home'> <img className='netflix_logo' src={NetflixLogo} alt="" /></Link> 

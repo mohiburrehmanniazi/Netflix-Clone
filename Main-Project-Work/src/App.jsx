@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
-import "./App.css";
+// import "./App.css";
 import Navbar from "./Components/Navbar";
 import MovieList from "./Components/MovieList";
 import TvShow from "./Components/TvShow";

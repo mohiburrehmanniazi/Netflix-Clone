@@ -15,7 +15,7 @@ export const AddTodo = ({ addTodo }) => {
 
 
   return (
-    <div className="add-todo">
+    <div className="add-todo bg-black">
       <textarea
         className="input-field"
         type="text"

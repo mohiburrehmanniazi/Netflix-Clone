@@ -1,6 +1,6 @@
 .form{
     height: 34rem;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0,0.9);
     width: 25rem;
     display: flex;
     flex-direction: column;
@@ -34,7 +34,7 @@ input{
     margin-bottom: 2em;
     margin-top: 4em;
     font-weight: 500;
-    background-color: black;
+    /* background-color: black;  */
 }
 
 .heading1{
@@ -45,7 +45,7 @@ input{
     padding: 4px;
     font-size: 20px;
     background-color: #E50914;
-    width: 18.6rem;
+    width: 18.0rem;
     border: 0.5px solid #E50914;
     border-radius: 6px;
     color: white;

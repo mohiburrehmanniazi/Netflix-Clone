@@ -4,13 +4,13 @@
   margin: 0;
   padding: 0;
   font-family: "roboto",serif;
-  background-color: #141414;
+  /* background-color: #141414; */
 }
 
 .navbar{
   display: flex;
   height: 70px;
-  background-color: rgb(19, 17, 17);
+  /* background-color: rgb(19, 17, 17); */
   align-items: center;
 }
 

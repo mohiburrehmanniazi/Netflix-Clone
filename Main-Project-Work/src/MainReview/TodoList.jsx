@@ -41,12 +41,12 @@ export const TodoList = () => {
 }
 
   return (
-    <div className="mainpage">
+    <div className="mainpage ">
     
-      <div>
+      <div className="bg-black">
         <h2 className="heading">Total Reviews: {items.length}</h2>
       </div>
-      <div className="todo-list shadow-lg">
+      <div className="todo-list shadow-lg bg-black">
         {items.map((item) => (
           <TodoItem
             key={item.id}
